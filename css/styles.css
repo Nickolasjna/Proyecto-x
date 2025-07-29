@@ -10,13 +10,13 @@ h1 {
 h2 {
   font-size: 2em;
   margin-bottom: 0.5em;
-  color: rgb(17, 0, 255);
+  color: rgb(255, 30, 0);
   font-family: 'Michroma', sans-serif;
+  text-align: center;
 }
 
 nav {
-  background-color: #ffffff;
-  color: rgba(56, 8, 226, 0.918);
+    color: wheat
   padding: 10px;
   text-align: left;
 }
@@ -27,10 +27,20 @@ nav {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } 
 .textoinicial {
-  font-size: 1.2em;
-  color: #0f0f0f;
-  margin-top: 20px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 15px;  
+  color: rgb(8, 8, 8);
+  margin-top: 50px;
+  font-family: michroma, sans-serif;
+  text-align: center;
+
+}
+.texto1 {
+  font-size: 15px;
+  color: rgb(2, 2, 2);
+  margin-top: 50px;
+  font-family: michroma, sans-serif;
+  text-align: center;
+
 }
 #tienda {
   font-size: 2em;
@@ -44,12 +54,34 @@ nav {
   margin: 10px;
   border-radius: 10px;
 }
-.camper{
-  width: 150px;
-  height: 150px;
-  margin: 10px;
-  border-radius: 10px;
+.galeria-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
+/* Input fecha */
+.filtro-fecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* Estilo de imágenes */
+.imagen-galeria {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.imagen-galeria:hover {
+  transform: scale(1.05);
+}
+
 .section.lorem1 {
   font-size: 1.2em;
   font-size: 1.8em;
@@ -77,6 +109,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     padding: 20px;
+    margin-top: 120px;
   }
   
   .whatsap {
@@ -93,7 +126,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: #f5f5f5; /* opcional: para resaltar */
+  background-color: #f5f5f5; 
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -121,3 +154,63 @@ nav {
 .boton:hover {
   background-color: #0056b3;
 }
+/* Header con flex */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Logo a la izquierda */
+.flex__logo img {
+  height:150px;
+}
+
+/* Título centrado absoluto arriba */
+.tituloprincipal {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.tituloprincipal h1 {
+  margin: 0;
+  font-size: 50px;
+  color: #0730b4;
+}
+
+/* Login a la derecha */
+.iniciosesion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+/* Menú debajo del header (opcional) */
+.menu {
+  width: 150%;
+  margin-top: 20px;
+  font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 20px;
+  color: white;
+}
+.menu :active {
+  color: #e7e7e7;
+}
+
+

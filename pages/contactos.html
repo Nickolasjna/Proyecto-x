@@ -6,34 +6,48 @@
     <title>Proyecto x - contactos</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="shortcut icon" href="../assets-img/logoprincipal.png" type="image/x-icon">
+<style>
+        body {
+            background-image: url("../assets-img/fondoavion.jpg");
+            background-size: cover;
+            background-position: center;    
+        }
+    </style>
 </head>
 <body>
-    <header> 
-        <a class="flex__logo" href="../index.html" alt="logo Proyecto X" title="logo">
-            <img  src="../assets-img/logoprincipal.png" alt="Logo de Proyecto X" title="Logo de Proyecto X">
-        </a>
-        <section class="iniciosesion">
-            <form action="inciosesion">
-                <label class="usuario">Usuario:</label>
-                <input type="text;number">
-                <div>
-                    <label class="contraseña">Contraseña:</label>
-                    <input type="password">
-                </div>
-            </form> 
-            <section class="tituloprincipal">
-            <h1 class="flex">Proyecto X </h1>
-            </section>
-    </header>
-        <nav>
-        <ul>
-            <li><a href="./contactos.html">contactos</a></li>
-            <li><a href="./galeria.html">galeria</a></li>
-            <li><a href="./sobrenosotros.html">sobrenosotros</a></li>
-            <li><a href="./tienda.html">tienda</a></li>
-        </ul>
-        </nav>
-    
+<!--etiqueta principal-->
+<header>
+    <div class="flex__logo">
+    <a href="../index.html" title="logo">
+        <img src="../assets-img/logoprincipal.png" alt="Logo de Proyecto X" title="Logo de Proyecto X">
+    </a>
+    </div>
+
+    <div class="tituloprincipal">
+    <h1>PROYECTO X</h1>
+    </div>
+
+    <div class="iniciosesion">
+    <div>
+        <label for="usuario">Usuario:</label>
+        <input type="text" name="usuario" id="usuario">
+    </div>
+    <div>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" name="contraseña" id="contraseña">
+    </div>
+    <button>Iniciar Sesión</button>
+    </div>
+
+    <nav class="menu">
+    <ul>
+        <li><a class="active" href="../pages/contactos.html">CONTACTOS</a></li>
+        <li><a href="../pages/galeria.html">GALERIA</a></li>
+        <li><a href="../pages/sobrenosotros.html">SOBRE NOSOTROS</a></li>
+        <li><a href="../pages/tienda.html">TIENDA</a></li>
+    </ul>
+    </nav>
+</header>
     <main>
         <H2>CONTACTOS</H2>
         <p>Si tienes alguna pregunta, no dudes en contactarnos.</p>
