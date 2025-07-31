@@ -1,86 +1,125 @@
 <!DOCTYPE html>
-<html lang="es-ar">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto x - contactos</title>
-    <link rel="stylesheet" href="/Proyecto-x/css/styles.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="shortcut icon" href="../assets-img/logoprincipal.png" type="image/x-icon">
-<style>
-        body {
-            background-image: url("../assets-img/fondoavion.jpg");
-            background-size: cover;
-            background-position: center;    
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proyecto X - Contactos</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" href="../assets-img/logoprincipal.png" type="image/x-icon" />
+  <style>
+    body {
+      background-image: url("../assets-img/fondoavion.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
 </head>
 <body>
-<!--etiqueta principal-->
-<header>
+  <header>
     <div class="flex__logo">
-    <a href="../index.html" title="logo">
-        <img src="../assets-img/logoprincipal.png" alt="Logo de Proyecto X" title="Logo de Proyecto X">
-    </a>
+      <a href="../index.html" title="Inicio">
+        <img
+          src="../assets-img/logoprincipal.png"
+          alt="Logo de Proyecto X"
+          title="Logo de Proyecto X"
+        />
+      </a>
     </div>
 
     <div class="tituloprincipal">
-    <h1>PROYECTO X</h1>
+      <h1>PROYECTO X</h1>
     </div>
 
     <div class="iniciosesion">
-    <div>
-        <label for="usuario">Usuario:</label>
-        <input type="text" name="usuario" id="usuario">
-    </div>
-    <div>
-        <label for="contraseña">Contraseña:</label>
-        <input type="password" name="contraseña" id="contraseña">
-    </div>
-    <button>Iniciar Sesión</button>
+      <form>
+        <div>
+          <label for="usuario">Usuario:</label>
+          <input type="text" id="usuario" name="usuario" required />
+        </div>
+        <div>
+          <label for="contraseña">Contraseña:</label>
+          <input type="password" id="contraseña" name="contraseña" required />
+        </div>
+        <button type="submit">Iniciar Sesión</button>
+      </form>
     </div>
 
     <nav class="menu">
-    <ul>
-        <li><a class="active" href="/pages/contactos.html">CONTACTOS</a></li>
-        <li><a class="active" href="/pages/galeria.html">GALERIA</a></li>
-        <li><a class="active" href="/pages/sobrenosotros.html">SOBRE NOSOTROS</a></li>
-        <li><a class="active" href="/pages/tienda.html">TIENDA</a></li>
-    </ul>
-    </ul>
+      <ul>
+        <li><a class="active" href="../pages/contactos.html">Contactos</a></li>
+        <li><a href="../pages/galeria.html">Galería</a></li>
+        <li><a href="../pages/sobrenosotros.html">Sobre Nosotros</a></li>
+        <li><a href="../pages/tienda.html">Tienda</a></li>
+      </ul>
     </nav>
-</header>
-    <main>
-        <H2>CONTACTOS</H2>
-        <p>Si tienes alguna pregunta, no dudes en contactarnos.</p>
-        <form>
-        <h2>Formulario de Contacto</h2> 
-        <label>Nombre:</label>
-        <input type="text">
-        <br>
-        <label>Apellido:</label>
-        <input type="text">
-        <br>                    
-        <label>Email:</label>
-        <input type="email">
-        <br>
-        <label>Mensaje:</label>
-        <textarea></textarea>
-        <br>
-        </form>
-    </main>|
-    <footer>
-        <p>© 2025 Proyecto X. Todos los derechos reservados.</p>
-        <p>Contacto: info@proyectox.com</p>
-        <a href="https://www.facebook.com" target="_blank"a>
-            <img src="../assets-img/logo facebook.png" alt="enlace a facebook" title="facebook">
-        <a href="https://www.instagram.com" target="_blank">
-            <img src="../assets-img/logoinstagram.png" alt="enlace a instagram" title="instagram">
-        <a href="https://www.youtube.com" target="_blank">
-            <img src="../assets-img/logoyoutube.png" alt="enlace a youtube" title="youtube">
-        <a href="https://www.whatsapp.com" target="_blank">
-            <img src="../assets-img/logowhatsap.png" alt="enlace a whatsapp" title="whatsap" class="whatsap">
-    </footer>
+  </header>
+
+  <main>
+    <h2>Contactos</h2>
+    <p>Si tienes alguna pregunta, no dudes en contactarnos.</p>
+    <form>
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+      <div>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Proyecto X. Todos los derechos reservados.</p>
+    <p>Contacto: <a href="mailto:info@proyectox.com">info@proyectox.com</a></p>
+    <div class="redes-sociales">
+      <a
+        href="https://www.facebook.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><img
+          src="../assets-img/logo facebook.png"
+          alt="Facebook"
+          title="Facebook"
+      /></a>
+      <a
+        href="https://www.instagram.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><img
+          src="../assets-img/logoinstagram.png"
+          alt="Instagram"
+          title="Instagram"
+      /></a>
+      <a
+        href="https://www.youtube.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><img
+          src="../assets-img/logoyoutube.png"
+          alt="YouTube"
+          title="YouTube"
+      /></a>
+      <a
+        href="https://www.whatsapp.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><img
+          src="../assets-img/logowhatsap.png"
+          alt="WhatsApp"
+          title="WhatsApp"
+          class="whatsap"
+      /></a>
+    </div>
+  </footer>
 </body>
 </html>
