@@ -1,0 +1,48 @@
+@use "variables" as v;
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    .textoinicial {
+    font-size: 15px;  
+    color: rgb(8, 8, 8);
+    margin-top: 50px;
+    font-family: v.$fuente1;
+    text-align: center;
+    font-weight: bold;
+    }
+    .texto1 {
+    font-size: 15px;
+    color: rgb(8, 8, 8);
+    margin-top: 50px;
+    font-family: v.$fuente1;
+    text-align: center;
+    font-weight: bold;
+    }
+    .imagen-principal {
+    width: 500px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    }
+}
+@include v.mobile {
+    main {
+        padding: 10px;
+        .textoinicial {
+            font-size: 14px;
+            margin-top: 30px;
+        }
+        .texto1 {
+            font-size: 14px;
+            margin-top: 30px;
+        }
+        .imagen-principal {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+    }
+}

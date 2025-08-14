@@ -87,6 +87,7 @@ nav {
   transform: scale(1.05);
 }
 .section.lorem1 {
+  font-size: 1.2em;
   font-size: 1.8em;
   color: #000000;
   margin-top: 10px;
