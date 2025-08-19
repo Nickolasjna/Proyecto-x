@@ -1,1 +1,35 @@
 @use "variables" as v;
+footer { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 120px;
+    font-weight: bold;
+    .whatsap {
+        position: fixed;
+        bottom: 30px;
+        right: 60px;
+        width: 60px;
+        height: 60px;
+    }
+    .facebook, .instagram, .youtube {
+        width: 60px;
+        height: 60px;
+    }
+}
+@include v.mobile {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    footer .whatsap {
+        bottom: 20px;
+        right: 20px;
+    }
+    footer .facebook, footer .instagram, footer .youtube {
+        width: 40px;
+        height: 40px;
+    }
+}

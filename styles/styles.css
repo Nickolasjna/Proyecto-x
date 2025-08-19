@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 body {
   background-image: url("../assets-img/FONDOAVION.jpg");
@@ -16,6 +15,98 @@ body {
   padding: 1rem;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: lucida sans;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  padding: 10px;
+  background-color: #0730b4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #041d6a;
+}
+
+/* Centrar el formulario */
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+main h2 {
+  padding: 10px;
+  border: 2px solid #494949;
+  border-radius: 6px;
+  font-size: 2% em;
+  font-family: lucida sans;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #e2e2e2;
+}
+
+.flex > p {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+  }
+  main h2 {
+    font-size: 1.5em;
+  }
+  .flex > p {
+    font-size: 1rem;
+  }
+}
 header {
   display: flex;
   flex-wrap: wrap;
@@ -90,15 +181,15 @@ header .iniciosesion {
   right: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   font-family: lucida sans;
-  background-color: #f5f5f5;
-  padding: 15px;
+  background-color: #ffffff;
+  padding: 5px;
   font-weight: bold;
   color: #0a0a0a;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  min-width: 200px; /* asegura que no se rompa el diseño */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(15, 1, 1, 0.986);
+  min-width: 200px;
 }
 header .iniciosesion label {
   font-weight: bold;
@@ -112,7 +203,7 @@ header .iniciosesion .boton {
   margin-top: 5px;
   padding: 8px;
   background-color: #007bff;
-  color: white;
+  color: rgb(243, 241, 241);
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -120,7 +211,6 @@ header .iniciosesion .boton {
 header .iniciosesion .boton:hover {
   background-color: #0056b3;
 }
-
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -152,8 +242,47 @@ header .iniciosesion .boton:hover {
     margin-top: 50px;
   }
   header .menu ul {
-    flex-direction: row;
-    gap: 10px;
+    flex-direction: column;
+    gap: 2px;
+  }
+  header .menu li {
+    font-size: 0.8em;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  margin-top: 120px;
+  font-weight: bold;
+}
+footer .whatsap {
+  position: fixed;
+  bottom: 30px;
+  right: 60px;
+  width: 60px;
+  height: 60px;
+}
+footer .facebook, footer .instagram, footer .youtube {
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  footer .whatsap {
+    bottom: 20px;
+    right: 20px;
+  }
+  footer .facebook, footer .instagram, footer .youtube {
+    width: 40px;
+    height: 40px;
   }
 }
 main {
@@ -201,6 +330,80 @@ main .imagen-principal {
     width: 100%;
     height: auto;
     margin-top: 10px;
+  }
+}
+.galeria-imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+.galeria-imagenes .imagen-galeria {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.galeria-imagenes .imagen-galeria:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+main .card {
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 60px rgba(0, 0, 0, 0.15);
+}
+main .flex__productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+main .flex__preguntas-frecuentes {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+main details {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.8rem;
+  margin: 0.5rem auto;
+  max-width: 700px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+main details:hover {
+  background-color: #f1f1f1;
+}
+main details summary {
+  font-weight: none;
+  font-size: 1.1rem;
+}
+@media (max-width: 768px) {
+  main .card {
+    width: 90%;
+    margin: 15px auto;
+  }
+  main .flex__productos {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 

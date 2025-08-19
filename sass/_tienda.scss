@@ -1,1 +1,67 @@
 @use "variables" as v;
+main {
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 50px rgba(0,0,0,0.1);
+    overflow: hidden; // evita que elementos internos sobresalgan
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 60px rgba(0,0,0,0.15);
+    }
+}
+
+    .flex__productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+  }
+
+  .flex__preguntas-frecuentes {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+    details {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.8rem;
+    margin: 0.5rem auto;
+    max-width: 700px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+    background-color: #f1f1f1;
+    }
+
+    summary {
+    font-weight: none;
+    font-size: 1.1rem;
+    }
+  }
+
+
+    @include v.mobile {
+    .card {
+    width: 90%; 
+    margin: 15px auto;
+    }
+
+    .flex__productos {
+    flex-direction: column;
+    gap: 20px;
+    }
+  }
+}
